@@ -15,6 +15,9 @@
     display: flex;
     background-color: black;
     position: relative;
+    width: 1200px; /* Możesz zmienić szerokość na dowolną */
+    margin: 0 auto; /* Centruje stronę w przeglądarce */
+    overflow-x: hidden; /* Zapobiega przewijaniu w poziomie */
   }
 
   .landing-section-2 > .boxes {
