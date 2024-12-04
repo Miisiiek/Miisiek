@@ -7,6 +7,144 @@
     <link rel="stylesheet" href="style.css">
     s
 </head>
+<style>
+  @font-face {
+    font-family: h1;
+    src: url(./fonts/Arewethereyet-ALGLp.ttf);
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;  
+  }
+
+  body {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    background-color: black;
+    position: relative;
+  }
+
+  .landing-section-2 > .boxes {
+    position: absolute;
+    width: 99%;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
+  }
+  
+  .landing-section-2 > .boxes > .box {
+    position: relative;
+    display: block;
+    width: 60vw;
+    height: 50vh;
+    background-color: rgba(128, 128, 128, 0.397);
+    border-radius: 10px;
+    transition: 0.2s;
+    overflow: hidden;
+  }
+  
+  .landing-section-2 > .boxes > .box > h1 {
+    position: absolute;
+    top: 50%;
+    right: 34%;
+    transform: translateY(-50%);
+    color: rgb(255, 255, 255);
+    font-family: h1;
+    font-size: 50px;
+  }
+  
+  .landing-section-2 > .boxes > .box > h4 {
+    position: relative;
+    top: 65%;
+    left: 2%;
+    transform: translateY(-50%);
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    width: 100%;
+  }
+  
+  .landing-section-2 > .boxes > .box > h4 > a {
+    color: var(--blue);
+  }
+  
+  .landing-section-2 > .boxes > .box > .image {
+    position: absolute;
+    top: 20px;
+    border-radius: 50px 50px;
+    right: 40%;
+    bottom: 0;
+    width: 20%;
+    height: auto;
+    transition: 0.2s;
+  }
+
+  .landing-section-2 > .boxes > .box > .tiktok {
+    position: absolute;
+    top: 345px;
+    right: 32%;
+    bottom: 0;
+    width: 10%;
+    height: auto;
+    transition: 0.2s;
+  }
+
+  .landing-section-2 > .boxes > .box > .dc {
+    position: absolute;
+    top: 330px;
+    right: 42%;
+    bottom: 0;
+    width: 14%;
+    height: auto;
+    transition: 0.2s;
+  }
+
+  .landing-section-2 > .boxes > .box > .donate {
+    position: absolute;
+    top: 340px;
+    right: 56%;
+    bottom: 0;
+    width: 12%;
+    height: auto;
+    transition: 0.2s;
+  }
+
+#snow-container {
+  position: fixed; /* Zmieniono na fixed, aby kontener obejmował całą stronę */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Zapobiega interakcji ze śniegiem */
+  z-index: 1; /* Kontener z tłem znajduje się poniżej treści */
+}
+
+#content {
+  z-index: 2; /* Treści strony mają wyższy z-index niż śnieżynki */
+}
+
+i.snowflake {
+  position: absolute;
+  top: -50px;
+  color: white; /* Śnieg jest teraz biały */
+  font-size: 1.5rem; /* Dostosowanie rozmiaru śniegu */
+  animation: snow linear;
+}
+
+@keyframes snow {
+  to {
+    transform: translateY(110vh);
+  }
+}
+</style>
 <body>
     <div id="snow-container"></div>
     <div id="content">
