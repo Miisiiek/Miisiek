@@ -35,7 +35,7 @@
     position: relative;
     display: block;
     width: 60vw;
-    height: 60vh;
+    height: 50vh;
     background-color: rgba(128, 128, 128, 0.397);
     border-radius: 10px;
     transition: 0.2s;
