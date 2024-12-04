@@ -23,4 +23,9 @@ const createSnow = () => {
   
   // Zmniejsz czas interwału, aby generować więcej śnieżynek
   setInterval(createSnow, 100); // 100ms interwału między kolejnymi generacjami
+
+window.addEventListener('resize', function () {
+    document.body.style.zoom = 1;
+});
+
   
